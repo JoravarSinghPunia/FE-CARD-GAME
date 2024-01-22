@@ -1,0 +1,75 @@
+* {
+  margin: 20px;
+}
+
+.header-and-reset-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.header-and-reset-button h1 {
+  font-size: 3rem;
+}
+
+.reset {
+  padding: 15px 20px;
+  margin: 30px;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+body {
+  background-color: aliceblue;
+  overflow: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.game {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fruits {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background-color: rgb(121, 208, 237);
+  transition: 0.75s;
+}
+
+.fruits.boxOpen {
+  transform: rotateY(0deg);
+}
+
+.fruits::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgb(218, 215, 233);
+  transition: 0.75s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+
+.boxOpen:after,
+.boxMatch:after {
+  transform: rotateY(180deg);
+}
