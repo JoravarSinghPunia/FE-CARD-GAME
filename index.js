@@ -33,7 +33,7 @@ for (let i = 0; i < randomFruits.length; i++) {
           document.querySelectorAll(".boxOpen")[0].classList.remove("boxOpen");
 
           if (document.querySelectorAll(".boxMatch").length == fruits.length) {
-            alert("Win");
+            alert("You've won! Press ok to play again!");
           }
         } else {
           document.querySelectorAll(".boxOpen")[1].classList.remove("boxOpen");
